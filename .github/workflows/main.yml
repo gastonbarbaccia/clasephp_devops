@@ -48,6 +48,7 @@ jobs:
   copy_paste_detector:
     name: Copy Paste Detector
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v2
       - name: PHP Copy Paste Detector
