@@ -131,13 +131,8 @@ jobs:
           host: ${{ secrets.FTP_SERVER_STG }}
           user: ${{ secrets.FTP_USERNAME_STG }}
           password: ${{ secrets.FTP_PASSWORD_STG }}
-<<<<<<< HEAD
-          localDir: "."
-          remoteDir: "."
-=======
           localDir: "src/"
           remoteDir: "cursodevops/gaston/stg/"
->>>>>>> main
 
   
   deploy_production:
