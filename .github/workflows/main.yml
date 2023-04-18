@@ -120,7 +120,7 @@ jobs:
     needs: [sonarcloud,dependency_check]
     environment: 
       name: staging
-      url: https://adidas.devcode-stg.com.ar
+      url: http://cursodevops.devcode.com.ar/
     steps:
       - uses: actions/checkout@v2
       - name: Upload ftp
@@ -130,7 +130,7 @@ jobs:
           user: ${{ secrets.FTP_USERNAME_STG }}
           password: ${{ secrets.FTP_PASSWORD_STG }}
           localDir: "src/"
-          remoteDir: "."
+          remoteDir: "cursodevops/gaston/stg/"
 
   
   deploy_production:
@@ -140,7 +140,7 @@ jobs:
     needs: [sonarcloud,dependency_check]
     environment: 
       name: production
-      url: https://adidas.devcode-prod.com.ar
+      url: http://cursodevops.devcode.com.ar/
     steps:
       - uses: actions/checkout@v2
       - name: Upload ftp
